@@ -3,3 +3,7 @@
 # haystack[1]
 
 haystack = {hay: [:hay, :hay, :hay, {hay: {hay: [:hay, {hay: [:hay, :hay, :needle]}, :hay, :hay, :hay]}}, :hay, :hay]}
+
+p haystack.first[1][3].first[1].first[1][1].first[1].last
+
+p haystack[:hay][3][:hay][:hay][1][:hay][2]

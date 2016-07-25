@@ -32,23 +32,7 @@ class SimpleCalculator
 
 end
 
-class FancyCalculator
-
-  def add(first_number, second_number)
-    first_number + second_number
-  end
-
-  def subtract(first_number, second_number)
-    first_number - second_number
-  end
-
-  def multiply(first_number, second_number)
-    first_number * second_number
-  end
-
-  def divide(first_number, second_number)
-    first_number / second_number
-  end
+class FancyCalculator < SimpleCalculator
 
   def square_root(number)
     Math.sqrt(number)
@@ -57,4 +41,20 @@ class FancyCalculator
 end
 
 # Write your own driver code below:
+p "Testing your amazing OOP skills:" 
+x = FancyCalculator.new
 
+answer = x.divide(100, 5)
+
+if answer == 20
+  puts "Pass!  Not bad!"
+else
+  puts "OOPs, not so amazing"
+end
+p "Methods of both..."
+answer = x.square_root(x.add(11, 38))
+if answer == 7
+  puts "Pass!  Not bad!"
+else
+  puts "OOPs, not so amazing"
+end
